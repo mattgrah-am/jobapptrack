@@ -34,7 +34,8 @@ TBC
 ## Planning
 
 ### WebApp Wireframes
-![](https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png?s=100)
+<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png" width="100px" height="100px">
+<!-- ![](https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png?s=100) -->
 
 ### CSS styles
 
