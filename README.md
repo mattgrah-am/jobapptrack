@@ -10,12 +10,12 @@ GA-SEI - Project 2 - Live Version (TBC)
 - [ ] Be deployed online and accessible to the public
 
 ## Necessary Deliverables
-- [] A working full-stack application, built by you, hosted somewhere on the internet
-- [] A link to your hosted working app in the URL section of your GitHub repo
-- [] A git repository hosted on GitHub, with a link to your hosted project, and frequent commits dating back to the very beginning of the project. Commit early, commit often.
-- [] A README.md file with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
+- [ ] A working full-stack application, built by you, hosted somewhere on the internet
+- [ ] A link to your hosted working app in the URL section of your GitHub repo
+- [ ] A git repository hosted on GitHub, with a link to your hosted project, and frequent commits dating back to the very beginning of the project. Commit early, commit often.
+- [ ] A README.md file with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
 
 ## Optional extras
-- [] Use JavaScript to make a smooth UI, e.g. validating your forms before submitting.
-- [] Interact with an external JSON API (check the weather, get book/movie info, space pictures, send SMSs, etc.)
-- [] Upload and store images or files using AWS S3
+- [ ] Use JavaScript to make a smooth UI, e.g. validating your forms before submitting.
+- [ ] Interact with an external JSON API (check the weather, get book/movie info, space pictures, send SMSs, etc.)
+- [ ] Upload and store images or files using AWS S3
