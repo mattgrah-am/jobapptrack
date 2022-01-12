@@ -1,5 +1,5 @@
 # Job Applciation Tracker
-GA-SEI - Project 2 - [Live Version (TBC](https://mattgrah-am.github.io/jobapptrack/)
+GA-SEI - Project 2 - [Live Version (TBC)](https://mattgrah-am.github.io/jobapptrack/)
 
 
 ## Technical Requirements
