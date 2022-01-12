@@ -1,7 +1,7 @@
 # Job Applciation Tracker
 GA-SEI - Project 2 - [Live Version](https://floating-forest-21500.herokuapp.com/)
 ## Summary
-TBC
+This full stack web app is a simple job application tracker that can be used to track jobs that the user has applied to, and has the ability to add further information to track the progress of the application process.
 
 ## Technical Requirements
 - [ ] Must Have at least 2 tables (more if they make sense) – one of them should represent the people using the application (users).
@@ -34,8 +34,10 @@ TBC
 ## Planning
 
 ### WebApp Wireframes
-<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png" width="250px" height="250px">
+<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png" width="400px">
 
+### HTML Design and Layout
+- TBC
 ### CSS styles
 
 -   **Font Family:** TBC
@@ -44,13 +46,30 @@ TBC
     -   TBC
 
 ### Javascript
--   TBC
+-   Form validation
+-   Mobile design
 
-### Python
--   TBC
-
-### Flask
+### Python / Flask
 -   TBC
 
 ### Database
 <img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/database.png" width="250px">
+
+## TODO
+- [x] Complete Wirefram
+- [x] Complete database layout
+- [x] Setup README.md template
+- [ ] Detail app layouts (mobile and desktop)
+- [ ] Setup templates (including base)
+    - [ ] Complate Base template HTML
+    - [ ] Complate Homepage (not logged in) template HTML (token about page)
+    - [ ] Complate Homepage (logged in) template HTML
+    - [ ] Complate User details (edit info) template HTML
+    - [ ] Complate Sign up template HTML
+- [ ] Complete CSS styling and functionality
+- [ ] Design logo
+- [ ] Complete Javascript works
+    - [ ] Form validation
+    - [ ] mobile menu
+- [ ] Setup database tables (via sql file)
+- [ ] create dummy data (via sql file for injection)
