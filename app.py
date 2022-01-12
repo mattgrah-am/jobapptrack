@@ -1,5 +1,5 @@
-from flask import Flask
 import os
+from flask import Flask
 import psycopg2
 
 DB_URL = os.environ.get("DATABASE_URL", "dbname=jobapptrack")
