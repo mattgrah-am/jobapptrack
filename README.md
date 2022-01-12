@@ -1,2 +1,2 @@
-# jobapptrack
-Project 2 - sei-anz-seifxr06 - A full stack app to track Job Applications.
+# Job Applciation Tracker
+GA-SEI - Project 2 - Live Version (TBC)
