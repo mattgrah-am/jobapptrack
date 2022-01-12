@@ -1,6 +1,7 @@
 # Job Applciation Tracker
 GA-SEI - Project 2 - [Live Version (TBC)](https://mattgrah-am.github.io/jobapptrack/)
-
+## Summary
+TBC
 
 ## Technical Requirements
 - [ ] Must Have at least 2 tables (more if they make sense) – one of them should represent the people using the application (users).
