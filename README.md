@@ -1,5 +1,5 @@
 # Job Applciation Tracker
-GA-SEI - Project 2 - [Live Version (TBC)](https://floating-forest-21500.herokuapp.com/)
+GA-SEI - Project 2 - [Live Version](https://floating-forest-21500.herokuapp.com/)
 ## Summary
 TBC
 
@@ -23,12 +23,18 @@ TBC
 
 ## Technology Used
 
-- TBC
+- HTML
+- CSS
+- Javascript
+- Python
+- Flask
+- Postgres
+- Heroku
 
 ## Planning
 
 ### WebApp Wireframes
-![](https://github.com/mattgrah-am/jobapptrack/blob/main/assets/mockup.png?s=100)
+![](https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png?s=100)
 
 ### CSS styles
 
@@ -47,4 +53,4 @@ TBC
 -   TBC
 
 ### Database
-![](https://github.com/mattgrah-am/jobapptrack/blob/main/assets/database.png?s=100)
+![](https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/database.png?s=100)
