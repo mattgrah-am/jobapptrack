@@ -34,7 +34,11 @@ This full stack web app is a simple job application tracker that can be used to 
 ## Planning
 
 ### WebApp Wireframes
+### Desktop
 <img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png" width="400px">
+
+### Mobile
+<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mobile.png" width="400px">
 
 ### HTML Design and Layout
 - TBC
@@ -59,7 +63,7 @@ This full stack web app is a simple job application tracker that can be used to 
 - [x] Complete Wirefram
 - [x] Complete database layout
 - [x] Setup README.md template
-- [ ] Detail app layouts (mobile and desktop)
+- [x] Detail app layouts (mobile and desktop)
 - [ ] Setup templates (including base)
     - [ ] Complate Base template HTML
     - [ ] Complate Homepage (not logged in) template HTML (token about page)
