@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/base.css" type="text/css">
+  <link rel="stylesheet" href="/static/components.css" type="text/css">
+  <link rel="stylesheet" href="/static/media.css" type="text/css">
+
+  <title>Job App Track</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <header>
+        <img src="/static/assets/logo.webp" alt="JOB APP Track" class="logo">
+        <div class="login_form">
+          <form action="/login" method="post">
+            <input type="text" id="username" name="username" aria-label="Username" placeholder="USERNAME">
+            <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
+            <button type="submit">LOGIN</button>
+          </form>
+          <small>Don't have an account? <a href="/signup">Sign Up!</a></small>
+        </div>
+        <div class="user_welcome">
+          <p class="welcome">Welcome username | <a href="/logout">Logout</a></p>
+        </div>
+      </header>
+      <main>
+        {% block content %} {% endblock content%}
+      </main>
+      <footer>
+        <small>Built with 🖤 by <a href="https://www.mattgrah.am" target="_blank">mattgrah.am</a></small>
+        <small>All rights reserved &copy; {{ year }} &#183; <a href="/">JOB APP Track</a></small>
+
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

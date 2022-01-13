@@ -35,10 +35,10 @@ This full stack web app is a simple job application tracker that can be used to 
 
 ### WebApp Wireframes
 ### Desktop
-<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mockup.png" width="400px">
+<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/mockup.png" width="400px">
 
 ### Mobile
-<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/mobile.png" width="400px">
+<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/mobile.png" width="400px">
 
 ### HTML Design and Layout
 - TBC
@@ -57,7 +57,7 @@ This full stack web app is a simple job application tracker that can be used to 
 -   TBC
 
 ### Database
-<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/assets/readme/database.png" width="250px">
+<img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/database.png" width="250px">
 
 ## TODO
 - [x] Complete Wirefram

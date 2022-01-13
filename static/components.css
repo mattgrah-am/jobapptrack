@@ -1,0 +1,97 @@
+/* Containers */
+.wrapper {
+  padding: 0.5rem;
+  min-height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+/* Images */
+.logo {
+  width: 25rem;
+  padding: 4rem 0;
+}
+
+/* Buttons */
+.btn {
+  display: block;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  width: 100%;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 0 0 1px #000;
+}
+
+/* Login Form */
+.login_form {
+  width: 25rem;
+}
+
+.login_form input {
+  margin-bottom: 2rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #000;
+}
+
+.login_form button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border: none
+}
+
+.login_form small {
+  display: block;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.user_welcome {
+  display: none;
+  text-align: center;
+  width: 20rem;
+  font-size: 1.2rem;
+}
+
+.about {
+  padding: 2rem;
+  font-size: 1.4rem;
+}
+
+.about h2,
+.about h3 {
+  margin-bottom: 2rem;
+}
+
+.about p {
+  margin: 2rem 0;
+}
+
+.about_img_1,
+.about_img_2 {
+  width: 100%;
+}

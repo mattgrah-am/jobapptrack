@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template, redirect
 import psycopg2
 
 DB_URL = os.environ.get("DATABASE_URL", "dbname=jobapptrack")
@@ -15,7 +15,7 @@ def index():
     cur = conn.cursor()
     cur.execute('SELECT 1', [])  # Query to check that the DB connected
     conn.close()
-    return 'Hello, world!'
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
