@@ -1,6 +1,19 @@
 /* font import */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
 
+/* Font Sizes 
+1.333 - Perfect Fourth
+h1 - 68px
+h2 - 50px
+h3 - 38px
+p - 16px
+small - 12px */
+
+/* Spacing
+Margin: 80px / 40px / 20px 
+Padding: 
+*/
+
 /* CSS Reset (basic) */
 *,
 *:before,
@@ -27,6 +40,10 @@ body {
   background-attachment: fixed;
 }
 
+main {
+  width: 100%;
+}
+
 small a:link,
 small a:visited {
   color: #000;
@@ -47,4 +64,34 @@ footer {
 footer small {
   text-align: center;
   display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 3.4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+small {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+img {
+  border-radius: 0.5rem;
 }

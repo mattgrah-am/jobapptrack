@@ -44,7 +44,8 @@ This full stack web app is a simple job application tracker that can be used to 
 - TBC
 ### CSS styles
 
--   **Font Family:** TBC
+-   **Font Family:** 
+    - Poppins (https://fonts.google.com/specimen/Poppins) 
 
 -   **Colours:**
     -   TBC
