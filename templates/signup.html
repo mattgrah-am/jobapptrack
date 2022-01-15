@@ -1,0 +1,20 @@
+{% block signup %}
+<div id="signup" class="signup">
+  <div class="signup_container" id="signup_container">
+    <div class="sign_head">
+      <h2>SIGN UP</h2>
+      <button id="close">&times;</button>
+    </div>
+    <form action="/signup" method="post">
+      <input type="text" id="first_name" name="first_name" aria-label="first_name" placeholder="FIRST NAME">
+      <input type="text" id="last_name" name="last_name" aria-label="last_name" placeholder="LAST NAME">
+      <input type="email" id="email" name="email" aria-label="email" placeholder="EMAIL">
+      <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
+      <input type="password" id="confirm_password" name="confirm_password" aria-label="confirm_password"
+        placeholder="CONFIRM PASSWORD">
+      <button type="submit">SIGN UP</button>
+    </form>
+    <small>Already have an account? <button id="login">LOGIN</button></small>
+  </div>
+</div>
+{% endblock signup %}

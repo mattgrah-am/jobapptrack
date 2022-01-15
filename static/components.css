@@ -10,8 +10,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  background-color: #fff;
-  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0.5rem;
 }
 
@@ -48,7 +47,7 @@
   width: 25rem;
 }
 
-.login_form input {
+input {
   margin-bottom: 2rem;
   width: 100%;
   background: none;
@@ -57,7 +56,7 @@
   border-bottom: solid 1px #000;
 }
 
-.login_form button {
+button {
   cursor: pointer;
   background-color: #000;
   color: #fff;
@@ -148,4 +147,73 @@ h2.job_header {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+}
+
+/* Sign Up */
+.signup,
+.login_window {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.signup.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.signup_container {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  width: 40rem;
+  max-width: 100%;
+  padding: 4rem;
+}
+
+.signup_container input {
+  display: block;
+}
+
+.signup_container small {
+  margin-top: 2rem;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+#close,
+#login_close {
+  background-color: #fff;
+  text-align: right;
+  color: #aaa;
+  margin: 0;
+  padding: 1rem 0 0 0;
+  font-size: 2.4rem;
+  width: 1rem;
+}
+
+#login,
+#signup_1 {
+  display: inline;
+  width: auto;
+}
+
+.sign_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.login_window.show {
+  pointer-events: auto;
+  opacity: 1;
 }

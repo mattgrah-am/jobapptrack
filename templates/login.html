@@ -1,0 +1,17 @@
+{% block login %}
+<div id="login_window" class="signup login_window">
+  <div class="signup_container" id="login_container">
+    <div class="sign_head">
+      <h2>LOGIN</h2>
+      <button id="login_close">&times;</button>
+    </div>
+    <form action="/login" method="post">
+      <input type="email" id="email" name="email" aria-label="email" placeholder="EMAIL">
+      <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
+      <button type="submit">LOGIN</button>
+    </form>
+    <small>Don't have an account? <button id="signup_3">SIGN UP</button></small>
+  </div>
+</div>
+</div>
+{% endblock login %}

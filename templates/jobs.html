@@ -1,0 +1,34 @@
+{% block jobs %}
+<div class="job_cards">
+  {% for i in jobs %}
+  {% if i[1] == session['user_id'] %}
+  <div class="job_card">
+    <h2 class="job_header"> {{ i[2] }}</h2>
+    <div class="job_content">
+      <p>Role: {{ i[3] }}</p>
+      <p>Pay: {{ i[4] }}</p>
+      <p>Link: <a href="{{ i[5] }}" target="_blank">link</a></p>
+      <p>Date Applied: {{ i[6] }}</p>
+      <p>Contact: {{ i[7] }}</p>
+      <p>Email: {{ i[8] }}</p>
+      <p>Response: {{ i[9] }}</p>
+      <p>Interview:</p>
+      <p>&emsp;- Stage: {{ i[10] }}</p>
+      <p>&emsp;- Date: {{ i[11] }}</p>
+      <p>Offer:
+        {% if i[12] == True %}
+        Yes
+        {% else %}
+        No
+        {% endif %}
+      </p>
+    </div>
+    <div class="buttons">
+      <a href="#" class="btn edit">EDIT</a>
+      <a href="#" class="btn delete">DELETE</a>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% endblock jobs %}
