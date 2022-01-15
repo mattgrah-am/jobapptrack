@@ -95,6 +95,12 @@
   text-align: center;
 }
 
+.job_cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .job_card {
   margin: 2rem;
   border-radius: 0.5rem;
@@ -102,6 +108,7 @@
   color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s;
+  width: 30rem;
 }
 
 .job_card:hover {
@@ -120,8 +127,12 @@
   text-transform: uppercase;
 }
 
+h2.job_header {
+  margin: 0;
+}
+
 .job_content {
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .edit {

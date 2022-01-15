@@ -31,24 +31,25 @@
     </div>
   </div>
 </div>
-
-<div class="job_card">
-  <h2 class="job_header">Company {{ company }}</h2>
-  <div class="job_content">
-    <p>Role: {{ role }}</p>
-    <p>Pay: {{ pay }}</p>
-    <p>Link: {{ link }}</p>
-    <p>Date Applied: {{ date_app }}</p>
-    <p>Contact: {{ contact }}</p>
-    <p>Interview Stage: {{ interview_stage }}</p>
-    <p>Interview Details: {{ interview_details }}</p>
-    <p>Offer: {{ offer }}</p>
+<div class="job_cards">
+  <div class="job_card">
+    <h2 class="job_header">Company {{ company }}</h2>
+    <div class="job_content">
+      <p>Role: {{ role }}</p>
+      <p>Pay: {{ pay }}</p>
+      <p>Link: {{ link }}</p>
+      <p>Date Applied: {{ date_app }}</p>
+      <p>Contact: {{ contact }}</p>
+      <p>Interview Stage: {{ interview_stage }}</p>
+      <p>Interview Details: {{ interview_details }}</p>
+      <p>Offer: {{ offer }}</p>
+    </div>
+    <div class="buttons">
+      <a href="#" class="btn edit">EDIT</a>
+      <a href="#" class="btn delete">DELETE</a>
+    </div>
   </div>
-  <div class="buttons">
-    <a href="#" class="btn edit">EDIT</a>
-    <a href="#" class="btn delete">DELETE</a>
-  </div>
-
 </div>
+
 
 {% endblock content %}
