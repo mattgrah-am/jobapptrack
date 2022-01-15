@@ -20,7 +20,7 @@ def get_all_jobs():
     jobs = []
     for item in results:
         jobs.append(
-            [item[0], item[1],  item[2],  item[3], f'${(item[4]/100):.2f}', item[5], item[6], item[7], item[8], item[9], item[10], item[11], item[12]])
+            [item[0], item[1],  item[2],  item[3], f'${(item[4]):.2f}', item[5], item[6], item[7], item[8], item[9], item[10], item[11], item[12]])
     return jobs
 
 

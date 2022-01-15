@@ -25,23 +25,19 @@ def logout():
     return redirect("/")
 
 
-# @users_controller.route('/signup/')
-# def signuppage():
-#     return render_template("signup.html", year=year)
-
-
-# @users_controller.route('/success/', methods=["POST"])
-# def signup_user():
-#     if len(request.form.get("password")) > 3 and request.form.get("password") == request.form.get("confirm_password"):
-#         insert_user(request.form.get("email"),
-#                     request.form.get("name"),
-#                     request.form.get("password"),
-#                     "false")
-#         session['msg'] = "success"
-#         return redirect('/login/')
-#     else:
-#         session['msg'] = "password_match"
-#         return redirect('/signup/')
+@users_controller.route('/signup', methods=["POST"])
+def signup_user():
+    if len(request.form.get("password")) > 3 and request.form.get("password") == request.form.get("confirm_password"):
+        insert_user(request.form.get("first_name"),
+                    request.form.get("last_name"),
+                    request.form.get("email"),
+                    request.form.get("password"),
+                    "false")
+        session['msg'] = "success"
+        return redirect('/')
+    else:
+        session['msg'] = "password_match"
+        return redirect('/')
 
 
 # @users_controller.route('/users/')
