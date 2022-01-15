@@ -66,15 +66,14 @@ This full stack web app is a simple job application tracker that can be used to 
 - [x] Setup README.md template
 - [x] Detail app layouts (mobile and desktop)
 - [ ] Setup templates (including base)
-    - [ ] Complate Base template HTML
-    - [ ] Complate Homepage (not logged in) template HTML (token about page)
-    - [ ] Complate Homepage (logged in) template HTML
+    - [x] Complate Base template HTML
+    - [x] Complate Homepage (not logged in) template HTML (token about page)
+    - [x] Complate Homepage (logged in) template HTML
     - [ ] Complate User details (edit info) template HTML
     - [ ] Complate Sign up template HTML
 - [ ] Complete CSS styling and functionality
-- [ ] Design logo
+- [x] Design logo
 - [ ] Complete Javascript works
     - [ ] Form validation
-    - [ ] mobile menu
 - [ ] Setup database tables (via sql file)
 - [ ] create dummy data (via sql file for injection)

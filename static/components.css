@@ -104,7 +104,7 @@
 .job_card {
   margin: 2rem;
   border-radius: 0.5rem;
-  background-color: hsla(0, 0%, 0%, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.3s;
@@ -112,7 +112,7 @@
 }
 
 .job_card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.75);
 }
 
 .job_header {
