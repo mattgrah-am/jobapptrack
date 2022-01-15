@@ -70,10 +70,11 @@ This full stack web app is a simple job application tracker that can be used to 
     - [x] Complate Homepage (not logged in) template HTML (token about page)
     - [x] Complate Homepage (logged in) template HTML
     - [ ] Complate User details (edit info) template HTML
-    - [ ] Complate Sign up template HTML
+    - [x] Complate Sign up template HTML
 - [ ] Complete CSS styling and functionality
 - [x] Design logo
 - [ ] Complete Javascript works
     - [ ] Form validation
+    - [x] Modal windows
 - [ ] Setup database tables (via sql file)
 - [ ] create dummy data (via sql file for injection)
