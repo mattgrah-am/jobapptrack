@@ -1,5 +1,33 @@
 {% extends "layout.html"%}
 {% block content %}
+{% if session['user_id'] %}
+<div class="job_cards">
+  {% for i in jobs %}
+  {% if i[1] == session['user_id'] %}
+  <div class="job_card">
+    <h2 class="job_header"> {{ i[2] }}</h2>
+    <div class="job_content">
+      <p>Role: {{ i[3] }}</p>
+      <p>Pay: {{ i[4] }}</p>
+      <p>Link: <a href="{{ i[5] }}" target="_blank">link</a></p>
+      <p>Date Applied: {{ i[6] }}</p>
+      <p>Contact: {{ i[7] }}</p>
+      <p>Email: {{ i[8] }}</p>
+      <p>Response: {{ i[9] }}</p>
+      <p>Interview:</p>
+      <p>&emsp;- Stage: {{ i[10] }}</p>
+      <p>&emsp;- Details: {{ i[11] }}</p>
+      <p>Offer: {{ i[12] }}</p>
+    </div>
+    <div class="buttons">
+      <a href="#" class="btn edit">EDIT</a>
+      <a href="#" class="btn delete">DELETE</a>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+{% else %}
 <div class="about">
   <h1>The BEST way to keep track of job Applications</h1>
   <div class="article_1">
@@ -31,26 +59,5 @@
     </div>
   </div>
 </div>
-<div class="job_cards">
-  <div class="job_card">
-    <h2 class="job_header">Company {{ company }}</h2>
-    <div class="job_content">
-      <p>Role: {{ role }}</p>
-      <p>Pay: {{ pay }}</p>
-      <p>Link: {{ link }}</p>
-      <p>Date Applied: {{ date_app }}</p>
-      <p>Contact: {{ contact_name }}</p>
-      <p>Email: {{ contact_details }}</p>
-      <p>Interview Stage: {{ interview_stage }}</p>
-      <p>Interview Details: {{ interview_details }}</p>
-      <p>Offer: {{ offer }}</p>
-    </div>
-    <div class="buttons">
-      <a href="#" class="btn edit">EDIT</a>
-      <a href="#" class="btn delete">DELETE</a>
-    </div>
-  </div>
-</div>
-
-
+{% endif %}
 {% endblock content %}

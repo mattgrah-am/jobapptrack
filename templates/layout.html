@@ -17,17 +17,20 @@
     <div class="container">
       <header>
         <img src="/static/assets/logo.webp" alt="JOB APP Track" class="logo">
+        {% if session['user_id'] %}
+        <div class="user_welcome">
+          <p class="welcome">Welcome {{ session['name'] }} | <a href="/logout">Logout</a></p>
+        </div>
+        {% else %}
         <div class="login_form">
           <form action="/login" method="post">
-            <input type="text" id="username" name="username" aria-label="Username" placeholder="USERNAME">
+            <input type="email" id="email" name="email" aria-label="email" placeholder="EMAIL">
             <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
             <button type="submit">LOGIN</button>
           </form>
           <small>Don't have an account? <a href="/signup">Sign Up!</a></small>
         </div>
-        <div class="user_welcome">
-          <p class="welcome">Welcome username | <a href="/logout">Logout</a></p>
-        </div>
+        {% endif %}
       </header>
       <main>
         {% block content %} {% endblock content%}

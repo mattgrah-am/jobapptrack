@@ -46,7 +46,6 @@
 /* Not Logged in */
 .login_form {
   width: 25rem;
-  display: none;
 }
 
 .login_form input {
@@ -75,7 +74,6 @@
 }
 
 .about {
-  display: none;
   padding: 2rem;
 }
 
@@ -91,7 +89,6 @@
 
 /* Logged In */
 .user_welcome {
-  display: block;
   text-align: center;
 }
 
@@ -99,6 +96,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .job_card {
