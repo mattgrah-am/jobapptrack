@@ -5,10 +5,6 @@ const signupOne = document.getElementById("signup_1");
 const signupTwo = document.getElementById("signup_2");
 const signupThree = document.getElementById("signup_3");
 const close = document.getElementById("close");
-const loginClose = document.getElementById("login_close");
-const login = document.getElementById("login")
-const loginWindow = document.getElementById("login_window");
-const loginContainer = document.getElementById("login_container");
 
 signupOne.addEventListener("click", () => {
   signup.classList.add("show");
@@ -24,6 +20,11 @@ window.addEventListener('mouseup', function (event) {
 })
 
 // Login Modal
+const loginClose = document.getElementById("login_close");
+const login = document.getElementById("login")
+const loginWindow = document.getElementById("login_window");
+const loginContainer = document.getElementById("login_container");
+
 login.addEventListener("click", () => {
   loginWindow.classList.add("show");
   signup.classList.remove("show");
@@ -39,3 +40,27 @@ window.addEventListener('mouseup', function (event) {
     loginWindow.classList.remove("show");
   }
 })
+
+// Password Check
+const signupPassword = document.getElementById("signup_password");
+const confirmPassword = document.getElementById("confirm_password");
+const result = document.getElementById('message');
+const submitSignin = document.getElementById("submit_signin")
+
+function checkPassword() {
+  if (signupPassword.value === confirmPassword.value) {
+    result.innerText = "Passwords match";
+    result.classList.add("success");
+    submitSignin.disabled = false
+  } else {
+    result.innerText = "Passwords do not match";
+    result.classList.add("alert");
+    submitSignin.disabled = true
+  }
+}
+
+signupPassword.addEventListener("keyup", () => {
+  if (confirmPassword.value.length != 0) checkPassword();
+});
+
+confirmPassword.addEventListener("keyup", checkPassword);

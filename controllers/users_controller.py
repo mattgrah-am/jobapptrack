@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, session, url_for
 import datetime
-from models.users import insert_user, get_user, get_all_users, update_user, delete_user
+from models.users import insert_user, get_user, get_users_email, get_all_users, update_user, delete_user
 from password import checkpassword
 
 users_controller = Blueprint("users_controller", __name__)
@@ -13,31 +13,35 @@ def login():
     if len(user) > 0 and checkpassword(request.form.get("password"), user[0][4]):
         session['user_id'] = user[0][0]
         session['name'] = user[0][1]
-        return redirect(url_for("index"))
+        return render_template("index.html")
     else:
-        session['msg'] = "error"
-        return redirect(url_for("index"))
+        return render_template("index.html", error=True)
 
 
-@users_controller.route('/logout/')
+@ users_controller.route('/logout/')
 def logout():
     session.clear()
     return redirect("/")
 
 
-@users_controller.route('/signup', methods=["POST"])
+@ users_controller.route('/signup', methods=["POST"])
 def signup_user():
-    if len(request.form.get("password")) > 3 and request.form.get("password") == request.form.get("confirm_password"):
+    emails = get_users_email()
+    for i in emails[0]:
+        print(i)
+        if i == request.form.get("email"):
+            return render_template("index.html", email_match_error=True)
+    else:
         insert_user(request.form.get("first_name"),
                     request.form.get("last_name"),
                     request.form.get("email"),
                     request.form.get("password"),
                     "false")
-        session['msg'] = "success"
+        session['signup'] = "success"
         return redirect('/')
-    else:
-        session['msg'] = "password_match"
-        return redirect('/')
+    # else:
+    #     session['signup_error'] = "error"
+    #     return redirect('/')
 
 
 # @users_controller.route('/users/')

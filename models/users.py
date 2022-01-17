@@ -15,6 +15,12 @@ def get_user(email):
     return row
 
 
+def get_users_email():
+    ''' SELECT USER INTO DB '''
+    emails = sql_select("SELECT email FROM users", [])
+    return emails
+
+
 def get_all_users():
     ''' SELECT ALL USERS INTO DB '''
     results = sql_select('SELECT * FROM users', [])

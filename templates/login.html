@@ -10,6 +10,9 @@
       <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
       <button type="submit">LOGIN</button>
     </form>
+    {% if error %}
+    <p class="alert">Incorrect email or password</p>
+    {% endif %}
     <small>Don't have an account? <button id="signup_3">SIGN UP</button></small>
   </div>
 </div>

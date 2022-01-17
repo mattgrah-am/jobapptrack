@@ -15,7 +15,7 @@
   <div class="wrapper">
     <div class="container">
       <header>
-        <img src="/static/assets/logo.webp" alt="JOB APP Track" class="logo">
+        <a href="/"><img src="/static/assets/logo.webp" alt="JOB APP Track" class="logo"></a>
         {% if session['user_id'] %}
         <div class="user_welcome">
           <p class="welcome">Welcome {{ session['name'] }} | <a href="/logout">Logout</a></p>
@@ -27,6 +27,9 @@
             <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
             <button type="submit">LOGIN</button>
           </form>
+          {% if error %}
+          <p class="alert">Incorrect email or password</p>
+          {% endif %}
           <small>Don't have an account? <button id="signup_1">SIGN UP</button></small>
         </div>
         {% endif %}
