@@ -7,21 +7,22 @@ jobs_controller = Blueprint("jobs_controller", __name__)
 year = datetime.datetime.now().year
 
 
-# @food_controller.route('/create/')
-# def create():
-#     if session.get('user_id'):
-#         return render_template('create.html', year=year)
-#     else:
-#         return redirect("/")
-
-
-# @food_controller.route('/food', methods=["POST"])
-# def insert():
-#     insert_food(request.form.get("name"),
-#                 request.form.get("price"),
-#                 request.form.get("image_url"),
-#                 request.form.get("description"))
-#     return redirect('/')
+@jobs_controller.route('/newjob', methods=["POST"])
+def add_job():
+    user = session["user_id"]
+    insert_job(user,
+               request.form.get("company"),
+               request.form.get("role"),
+               request.form.get("pay"),
+               request.form.get("link"),
+               request.form.get("app_date"),
+               request.form.get("contact_name"),
+               request.form.get("contact_details"),
+               request.form.get("app_response"),
+               request.form.get("interview_stage"),
+               request.form.get("interview_details"),
+               request.form.get("offer"))
+    return redirect('/')
 
 
 # @food_controller.route('/update/')

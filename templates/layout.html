@@ -43,7 +43,11 @@
       </footer>
     </div>
   </div>
-  <script type="text/javascript" src="/static/script.js"></script>
+  {% if session['user_id'] %}
+  <script type="text/javascript" src="/static/logged_in.js"></script>
+  {% else %}
+  <script type="text/javascript" src="/static/logged_out.js"></script>
+  {% endif %}
 </body>
 
 </html>

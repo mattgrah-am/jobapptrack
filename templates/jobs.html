@@ -1,4 +1,7 @@
 {% block jobs %}
+
+<button id="add_new" class="add_new btn">ADD NEW</button>
+
 <div class="job_cards">
   {% for i in jobs %}
   {% if i[1] == session['user_id'] %}
@@ -24,7 +27,10 @@
       </p>
     </div>
     <div class="buttons">
-      <a href="#" class="btn edit">EDIT</a>
+      <form action="/edit_job" method="post">
+        <input type="hidden" value="{{ i[0] }}">
+        <button class="btn edit">EDIT</button>
+      </form>
     </div>
   </div>
   {% endif %}

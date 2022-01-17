@@ -13,7 +13,7 @@ def login():
     if len(user) > 0 and checkpassword(request.form.get("password"), user[0][4]):
         session['user_id'] = user[0][0]
         session['name'] = user[0][1]
-        return render_template("index.html")
+        return redirect(url_for("index"))
     else:
         return render_template("index.html", error=True)
 

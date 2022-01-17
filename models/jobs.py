@@ -1,10 +1,11 @@
+import imp
 from database import sql_write, sql_select
 
 
-def insert_job(company, role, pay, link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer):
+def insert_job(user_id, company, role, pay, link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer):
     '''INSERT JOB INTO DB'''
-    sql_write('INSERT INTO food(company, role, pay, link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);', [
-              company, role, float(pay) * 100, link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer])
+    sql_write('INSERT INTO jobs(user_id, company, role, pay, link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);', [
+              user_id, company, role, float(pay), link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer])
 
 
 def get_job(id):

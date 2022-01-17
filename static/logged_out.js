@@ -31,7 +31,7 @@ login.addEventListener("click", () => {
 });
 
 signupThree.addEventListener("click", () => {
-  signup.classList.add("show");
+  modal.classList.add("show");
   loginWindow.classList.remove("show");
 });
 

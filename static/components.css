@@ -142,16 +142,23 @@ h2.job_header {
   background-color: #f73939;
 }
 
+.add_new {
+  width: auto;
+  background-color: #21D4FD;
+  margin: 1rem auto 0;
+  padding: 1rem 2rem;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
 .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
 }
 
-/* Sign Up */
-.signup,
-.login_window {
+/* model windows */
+.modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,12 +173,7 @@ h2.job_header {
   transition: opacity 0.3s ease;
 }
 
-.signup.show {
-  pointer-events: auto;
-  opacity: 1;
-}
-
-.signup_container {
+.modal_container {
   background-color: #fff;
   border-radius: 0.5rem;
   width: 40rem;
@@ -179,19 +181,42 @@ h2.job_header {
   padding: 4rem;
 }
 
-.signup_container input {
+.modal_container input {
   display: block;
 }
 
-.signup_container small {
+.modal_container small {
   margin-top: 2rem;
   display: block;
   text-align: center;
   width: 100%;
 }
 
+.modal_container label {
+  font-size: 1.2rem;
+  color: #aaa;
+  padding-bottom: 4rem;
+}
+
+.modal_container select {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #000;
+}
+
+.modal_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 #close,
-#login_close {
+#login_close,
+#newjob_close {
   background-color: #fff;
   text-align: right;
   color: #aaa;
@@ -207,13 +232,17 @@ h2.job_header {
   width: auto;
 }
 
-.sign_head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.signup_window.show {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 .login_window.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.newjob_window.show {
   pointer-events: auto;
   opacity: 1;
 }
@@ -237,4 +266,18 @@ h2.job_header {
   background-color: #d1e7dd;
   color: #0f5132;
   border: 1px solid #badbcc;
+}
+
+#newjob_container {
+  width: 80rem;
+}
+
+.addnew_form form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.addnew_form form div {
+  width: 100%;
 }
