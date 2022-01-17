@@ -29,6 +29,7 @@ def update_job(company, role, pay, link, app_date, contact_name, contact_details
     '''UPDATE JOB FROM DB'''
     sql_write('UPDATE jobs SET company = %s, role = %s, pay = %s, link = %s, app_date = %s, contact_name = %s, contact_details = %s, app_response = %s, interview_stage = %s, interview_details = %s, offer = %s WHERE id = %s;', [
         company, role, pay, link, app_date, contact_name, contact_details, app_response, interview_stage, interview_details, offer, job_id])
+    print("success")
 
 
 def delete_job(job_id):

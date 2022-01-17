@@ -48,7 +48,7 @@
 }
 
 input {
-  margin-bottom: 2rem;
+  /* margin-bottom: 1rem; */
   width: 100%;
   background: none;
   border: none;
@@ -178,7 +178,7 @@ h2.job_header {
   border-radius: 0.5rem;
   width: 40rem;
   max-width: 100%;
-  padding: 4rem;
+  padding: 2rem;
 }
 
 .modal_container input {
@@ -195,7 +195,6 @@ h2.job_header {
 .modal_container label {
   font-size: 1.2rem;
   color: #aaa;
-  padding-bottom: 4rem;
 }
 
 .modal_container select {
@@ -203,9 +202,13 @@ h2.job_header {
   width: 100%;
   background: none;
   border: none;
-  margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: solid 1px #000;
+}
+
+.modal_container button {
+  margin: 2rem 0 0;
+  padding: 1rem 0;
 }
 
 .modal_head {
@@ -216,12 +219,12 @@ h2.job_header {
 
 #close,
 #login_close,
-#newjob_close {
+#newjob_close,
+#editjob_close {
   background-color: #fff;
   text-align: right;
   color: #aaa;
   margin: 0;
-  padding: 1rem 0 0 0;
   font-size: 2.4rem;
   width: 1rem;
 }
@@ -247,6 +250,11 @@ h2.job_header {
   opacity: 1;
 }
 
+.editjob_window.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
 .alert,
 .success {
   border-radius: 0.5rem;
@@ -268,13 +276,9 @@ h2.job_header {
   border: 1px solid #badbcc;
 }
 
-#newjob_container {
-  width: 80rem;
-}
-
 .addnew_form form {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
   width: 100%;
 }
 

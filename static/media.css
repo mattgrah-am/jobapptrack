@@ -69,6 +69,17 @@
     display: block;
     margin: 4rem 0;
   }
+
+  #newjob_container {
+    width: 80rem;
+  }
+
+  .addnew_form form {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
