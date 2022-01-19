@@ -5,7 +5,6 @@ from models.jobs import get_all_jobs
 from controllers.jobs_controller import jobs_controller
 from controllers.users_controller import users_controller
 
-DB_URL = os.environ.get("DATABASE_URL", "dbname=jobapptrack")
 SECRET_KEY = os.environ.get("SECRET_KEY", "TEST_SECRET_KEY")
 
 app = Flask(__name__)
