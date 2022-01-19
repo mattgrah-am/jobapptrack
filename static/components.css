@@ -47,25 +47,6 @@
   width: 25rem;
 }
 
-input {
-  /* margin-bottom: 1rem; */
-  width: 100%;
-  background: none;
-  border: none;
-  padding-bottom: 1rem;
-  border-bottom: solid 1px #000;
-}
-
-button {
-  cursor: pointer;
-  background-color: #000;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
-  width: 100%;
-  border: none;
-  border-radius: 0.5rem;
-}
 
 .login_form small {
   display: block;
@@ -207,7 +188,6 @@ h2.job_header {
 }
 
 .modal_container button {
-  margin: 2rem 0 0;
   padding: 1rem 0;
 }
 
@@ -255,6 +235,14 @@ h2.job_header {
   opacity: 1;
 }
 
+.input_forms input {
+  margin-bottom: 2rem;
+}
+
+#login {
+  padding: 1rem 2rem;
+}
+
 .alert,
 .success {
   border-radius: 0.5rem;
@@ -284,4 +272,8 @@ h2.job_header {
 
 .addnew_form form div {
   width: 100%;
+}
+
+.addnew_form form button {
+  margin-top: 2rem;
 }

@@ -95,3 +95,29 @@ p {
 img {
   border-radius: 0.5rem;
 }
+
+
+input {
+  /* margin-bottom: 1rem; */
+  width: 100%;
+  background: none;
+  border: none;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px #000;
+}
+
+input:focus {
+  outline: none;
+  background-color: hsla(281, 100%, 56%, 0.1);
+}
+
+button {
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  border: none;
+  border-radius: 0.5rem;
+}
