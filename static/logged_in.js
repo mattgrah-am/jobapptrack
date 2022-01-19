@@ -18,13 +18,14 @@ window.addEventListener('mouseup', function (event) {
 
 // Edit job Modal
 const editJobClose = document.getElementById("editjob_close");
-const editjob = document.getElementById("editjob")
+const editjob = document.querySelectorAll(".edit")
 const editJobWindow = document.getElementById("editjob_window");
 const editJobContainer = document.getElementById("editjob_container");
 
-addNew.addEventListener("click", () => {
+editjob.forEach(el => el.addEventListener("click", () => {
+  console.log('click')
   editJobWindow.classList.add("show");
-});
+}));
 
 
 window.addEventListener('mouseup', function (event) {

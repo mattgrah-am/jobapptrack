@@ -39,9 +39,6 @@ def signup_user():
                     "false")
         session['signup'] = "success"
         return redirect('/')
-    # else:
-    #     session['signup_error'] = "error"
-    #     return redirect('/')
 
 
 # @users_controller.route('/users/')

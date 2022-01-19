@@ -1,4 +1,3 @@
-import imp
 from database import sql_write, sql_select
 
 
@@ -34,4 +33,4 @@ def update_job(company, role, pay, link, app_date, contact_name, contact_details
 
 def delete_job(job_id):
     '''DELETE JOB FROM DB'''
-    sql_write('DELETE FROM food WHERE id = %s;', [job_id])
+    sql_write('DELETE FROM jobs WHERE id = %s;', [job_id])

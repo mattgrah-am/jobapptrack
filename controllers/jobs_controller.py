@@ -1,6 +1,6 @@
-from flask import Blueprint, render_template, request, redirect, session, url_for
+from flask import Blueprint, request, redirect, session, url_for
 import datetime
-from models.jobs import insert_job, get_job, get_all_jobs, update_job, delete_job
+from models.jobs import insert_job, get_job, update_job, delete_job
 
 
 jobs_controller = Blueprint("jobs_controller", __name__)
@@ -22,13 +22,16 @@ def add_job():
                request.form.get("interview_stage"),
                request.form.get("interview_details"),
                request.form.get("offer"))
-    return redirect('/')
+    session['job_data'] = None
+    session['show'] = ""
+    return redirect(url_for("index"))
 
 
 @jobs_controller.route('/edit', methods=["POST"])
 def edit():
-    job_data = get_job(request.form.get("id"))
-    return redirect(url_for("index", job_data=job_data, show="show"))
+    session['job_data'] = get_job(request.form.get("id"))
+    session['show'] = "show"
+    return redirect(url_for("index"))
 
 
 @jobs_controller.route('/update', methods=["POST"])
@@ -45,10 +48,14 @@ def update():
                request.form.get("interview_details"),
                request.form.get("offer"),
                request.form.get("job_id"))
+    session['job_data'] = None
+    session['show'] = ""
     return redirect(url_for("index"))
 
 
-# @food_controller.route('/delete_food/', methods=["POST"])
-# def delete_foods():
-#     delete_food(request.form.get("id"))
-#     return redirect('/')
+@jobs_controller.route('/deletejob', methods=["POST"])
+def deletejob():
+    delete_job(request.form.get("id"))
+    session['job_data'] = None
+    session['show'] = ""
+    return redirect(url_for("index"))

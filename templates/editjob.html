@@ -1,5 +1,5 @@
 {% block editjob %}
-<div id="editjob_window" class="modal newjob_window {{ show }}">
+<div id="editjob_window" class="modal editjob_window {{ show }}">
   <div class="modal_container" id="editjob_container">
     <div class="modal_head">
       <h2>UPDATE</h2>
@@ -9,28 +9,30 @@
       <form action="/update" method="post">
         <div>
           <label for="comany">COMPANY</label>
-          <input type="text" id="company" name="company" aria-label="Company" value="{{ job_data[2] }}" required>
+          <input type="text" id="company" name="company" aria-label="Company" value="{{ session['job_data'][2] }}"
+            required>
           <label for="role">ROLE</label>
-          <input type="text" id="role" name="role" aria-label="Role" value="{{ job_data[3] }}" required>
+          <input type="text" id="role" name="role" aria-label="Role" value="{{ session['job_data'][3] }}" required>
           <label for=" pay">SALARY / WAGE</label>
-          <input type="number" id="pay" name="pay" aria-label="Salary / Wage" value="{{ job_data[4] }}" required>
+          <input type="number" id="pay" name="pay" aria-label="Salary / Wage" value="{{ session['job_data'][4] }}"
+            required>
           <label for="link">LINK TO ADVERTISEMENT</label>
-          <input type="text" id="link" name="link" aria-label="link to Advertisement" value="{{ job_data[5] }}"
-            required>
+          <input type="text" id="link" name="link" aria-label="link to Advertisement"
+            value="{{ session['job_data'][5] }}" required>
           <label for="app_date">APPLICATION DATE</label>
-          <input type="date" id="app_date" name="app_date" aria-label="Application Date" value="{{ job_data[6] }}"
-            required>
+          <input type="date" id="app_date" name="app_date" aria-label="Application Date"
+            value="{{ session['job_data'][6] }}" required>
           <label for="contact_name">CONTACT NAME</label>
-          <input type="text" id="contact_name" name="contact_name" aria-label="Contact Name" value="{{ job_data[7] }}"
-            required>
+          <input type="text" id="contact_name" name="contact_name" aria-label="Contact Name"
+            value="{{ session['job_data'][7] }}" required>
         </div>
         <div>
           <label for="contact_details">CONTACT EMAIL</label>
           <input type="email" id="contact_details" name="contact_details" aria-label="Contact Email"
-            value="{{ job_data[8] }}" required>
+            value="{{ session['job_data'][8] }}" required>
           <label for="app_response">APPLICATION RESPONSE</label>
           <select id="app_response" name="app_response" aria-label="Application Response" required>
-            <option value="{{ job_data[9] }}">{{ job_data[9] }}</option>
+            <option value="{{ session['job_data'][9] }}">{{ session['job_data'][9] }}</option>
             <option value="No Response">No Response</option>
             <option value="Positive Email">Positive Email</option>
             <option value="Positive Phone Call">Positive Phone Call</option>
@@ -38,7 +40,7 @@
           </select>
           <label for="interview_stage">INTERVIEW STAGE</label>
           <select id="interview_stage" name="interview_stage" aria-label="Interview Stage" required>
-            <option value="{{ job_data[10] }}">{{ job_data[10] }}</option>
+            <option value="{{ session['job_data'][10] }}">{{ session['job_data'][10] }}</option>
             <option value="No Interview Scheduled">No Interview Scheduled</option>
             <option value="Phone / Conferenece Call">Phone Call</option>
             <option value="1st Face to Face">1st Face to Face</option>
@@ -48,21 +50,21 @@
           </select>
           <label for="interview_details">INTERVIEW DATE</label>
           <input type="date" id="interview_details" name="interview_details" aria-label="Interview Date"
-            value="{{ job_data[11] }}">
+            value="{{ session['job_data'][11] }}">
           <label for="offer">OFFER</label>
           <select id="offer" name="offer" aria-label="Offer" required>
-            <option value="{{ job_data[12] }}">{{ job_data[12] }}</option>
+            <option value="{{ session['job_data'][12] }}">{{ session['job_data'][12] }}</option>
             <option value="True">True</option>
             <option value="False">False</option>
           </select>
-          <input type="hidden" name="job_id" id="job_id" value="{{ job_data[0] }}" />
+          <input type="hidden" name="job_id" id="job_id" value="{{ session['job_data'][0] }}" />
           <button type="submit">UPDATE</button>
         </div>
       </form>
     </div>
     <form action="/deletejob" method="post">
       <div>
-        <input id="id" name="id" type="hidden" value="{{ job_data[0] }}" />
+        <input id="id" name="id" type="hidden" value="{{ session['job_data'][0] }}" />
         <button class="delete btn" type="submit">DELETE</button>
       </div>
     </form>
