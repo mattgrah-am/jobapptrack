@@ -14,7 +14,7 @@ signupTwo.addEventListener("click", () => {
 });
 
 window.addEventListener('mouseup', function (event) {
-  if ((event.target != signupContainer && event.target.parentNode != signupContainer && event.target.parentNode.parentNode != signupContainer) || event.target === close) {
+  if (!event.target.closest("#signup_container") || event.target.matches("#close")) {
     signup.classList.remove("show");
   }
 })
@@ -31,12 +31,12 @@ login.addEventListener("click", () => {
 });
 
 signupThree.addEventListener("click", () => {
-  modal.classList.add("show");
+  signup.classList.add("show");
   loginWindow.classList.remove("show");
 });
 
 window.addEventListener('mouseup', function (event) {
-  if ((event.target != loginContainer && event.target.parentNode != loginContainer && event.target.parentNode.parentNode != loginContainer) || event.target === loginClose) {
+  if (!event.target.closest("#login_container") || event.target.matches("#login_close")) {
     loginWindow.classList.remove("show");
   }
 })

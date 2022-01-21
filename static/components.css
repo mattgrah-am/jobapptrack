@@ -215,21 +215,9 @@ h2.job_header {
   width: auto;
 }
 
-.signup_window.show {
-  pointer-events: auto;
-  opacity: 1;
-}
-
-.login_window.show {
-  pointer-events: auto;
-  opacity: 1;
-}
-
-.newjob_window.show {
-  pointer-events: auto;
-  opacity: 1;
-}
-
+.signup_window.show,
+.login_window.show,
+.newjob_window.show,
 .editjob_window.show {
   pointer-events: auto;
   opacity: 1;

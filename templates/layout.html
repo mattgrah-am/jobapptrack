@@ -23,8 +23,8 @@
         {% else %}
         <div class="login_form">
           <form action="/login" method="post">
-            <input type="email" id="email" name="email" aria-label="email" placeholder="EMAIL">
-            <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD">
+            <input type="email" id="email" name="email" aria-label="email" placeholder="EMAIL" required>
+            <input type="password" id="password" name="password" aria-label="Password" placeholder="PASSWORD" required>
             <button type="submit">LOGIN</button>
           </form>
           {% if error %}
