@@ -68,7 +68,8 @@ This full stack web app is a job application tracker that can be used to track j
     -   Models for job and user commands
     -   Controllers for job and user commands
     -   Password encryption and validation using bcrypt
-    -   database using Postgres
+    -   
 
 ### Database
+Database is using Postgres with Python Module: psycopg2.
 <img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/database.png" width="250px">
