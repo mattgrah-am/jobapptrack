@@ -72,4 +72,6 @@ This full stack web app is a job application tracker that can be used to track j
 
 ### Database
 Database is using Postgres with Python Module: psycopg2.
+
+
 <img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/database.png" width="250px">
