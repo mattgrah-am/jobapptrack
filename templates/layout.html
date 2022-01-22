@@ -29,6 +29,8 @@
           </form>
           {% if error %}
           <p class="alert">Incorrect email or password</p>
+          {% elif success %}
+          <p class="success">Sign up successful, please use your email and password to login</p>
           {% endif %}
           <small>Don't have an account? <button id="signup_1">SIGN UP</button></small>
         </div>

@@ -38,9 +38,9 @@ def signup_user():
                     request.form.get("password"),
                     "false")
         session['signup'] = "success"
-        return redirect('/')
+        return render_template("index.html", success=True)
 
-
+# Edit Users modal (future release)
 # @users_controller.route('/users/')
 # def user_list():
 #     users = get_all_users()

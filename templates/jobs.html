@@ -2,11 +2,11 @@
 
 <button id="add_new" class="add_new btn">ADD NEW</button>
 
-<div class="job_cards">
+<section class="job_cards">
   {% for i in jobs %}
   {% if i[1] == session['user_id'] %}
   <div class="job_card">
-    <h2 class="job_header"> {{ i[2] }}</h2>
+    <p class="job_header"> {{ i[2] }}</p>
     <div class="job_content">
       <p>Role: {{ i[3] }}</p>
       <p>Pay: {{ i[4] }}</p>
@@ -35,5 +35,5 @@
   </div>
   {% endif %}
   {% endfor %}
-</div>
+</section>
 {% endblock jobs %}

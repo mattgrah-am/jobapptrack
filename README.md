@@ -1,13 +1,13 @@
 # Job Applciation Tracker
 GA-SEI - Project 2 - [Live Version](https://floating-forest-21500.herokuapp.com/)
 ## Summary
-This full stack web app is a simple job application tracker that can be used to track jobs that the user has applied to, and has the ability to add further information to track the progress of the application process.
+This full stack web app is a job application tracker that can be used to track jobs that the user has applied to, and has the ability to addfurther information or edit existing information to track the progress of the application process.
 
 ## Technical Requirements
 - [x] Must Have at least 2 tables (more if they make sense) – one of them should represent the people using the application (users).
 - [x] Include sign up/log in functionality (if it makes sense), with encrypted passwords & an authorization flow
 - [x] Modify data in the database. There should be ways for users to add/change some data in the database (it's ok if only admins can make changes).
-- [ ] Have semantically clean HTML and CSS
+- [x] Have semantically clean HTML and CSS
 - [x] Be deployed online and accessible to the public
 
 ## Necessary Deliverables
@@ -18,8 +18,8 @@ This full stack web app is a simple job application tracker that can be used to 
 
 ## Optional extras
 - [x] Use JavaScript to make a smooth UI, e.g. validating forms before submitting.
-- [ ] Interact with an external JSON API (check the weather, get book/movie info, space pictures, send SMSs, etc.)
-- [ ] Upload and store images or files using AWS S3
+- [ ] ~~Interact with an external JSON API (check the weather, get book/movie info, space pictures, send SMSs, etc.)~~
+- [ ] ~~Upload and store images or files using AWS S3~~
 
 ## Technology Used
 
@@ -41,21 +41,34 @@ This full stack web app is a simple job application tracker that can be used to 
 <img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/mobile.png" width="400px">
 
 ### HTML Design and Layout
-- TBC
+- Standard semantic HTML
 ### CSS styles
 
 -   **Font Family:** 
     - Poppins (https://fonts.google.com/specimen/Poppins) 
 
 -   **Colours:**
-    -   TBC
+    -   Font (light): #000000
+    -   Font (dark): #ffffff
+    -   Accents: #21D4FD, #B721FF, #ff8b8b
+    -   Alert: #f8d7da, #842029
+    -   Success: #d1e7dd, #0f5132
 
+-   **Responsiveness**
+    -   Media queries at 800px and 1000px
+    -   Flexblox: Mobile layout
+    -   Grid: About section layout
 ### Javascript
 -   Form validation
--   Mobile design
+-   Modal windows
 
 ### Python / Flask
--   TBC
+-   **Flask**
+    -   HTML Templates using Jinja wiht index.html being the central file calling all temaplates
+    -   Models for job and user commands
+    -   Controllers for job and user commands
+    -   Password encryption and validation using bcrypt
+    -   database using Postgres
 
 ### Database
 <img src="https://github.com/mattgrah-am/jobapptrack/blob/main/static/assets/readme/database.png" width="250px">
