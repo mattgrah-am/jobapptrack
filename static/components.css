@@ -235,27 +235,6 @@ h2.job_header {
   padding: 1rem 2rem;
 }
 
-.alert,
-.success {
-  border-radius: 0.5rem;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  width: 100%;
-  font-size: 1.2rem;
-}
-
-.alert {
-  background-color: #f8d7da;
-  color: #842029;
-  border: 1px solid #f5c2c7;
-}
-
-.success {
-  background-color: #d1e7dd;
-  color: #0f5132;
-  border: 1px solid #badbcc;
-}
-
 .addnew_form form {
   display: flex;
   flex-direction: column;

@@ -1,3 +1,4 @@
+'''IMPORT MODULES'''
 from database import sql_write, sql_select
 from password import hashpassword
 

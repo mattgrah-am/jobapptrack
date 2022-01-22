@@ -1,14 +1,14 @@
+'''IMPORT MODULES'''
 from flask import Blueprint, render_template, request, redirect, session, url_for
-import datetime
 from models.users import insert_user, get_user, get_users_email, get_all_users, update_user, delete_user
 from password import checkpassword
 
 users_controller = Blueprint("users_controller", __name__)
-year = datetime.datetime.now().year
 
 
 @users_controller.route('/login', methods=["POST"])
 def login():
+    '''LOGIN VALIDATION CHECKING PASSWORD'''
     user = get_user(request.form.get("email"))
     if len(user) > 0 and checkpassword(request.form.get("password"), user[0][4]):
         session['user_id'] = user[0][0]
@@ -20,12 +20,14 @@ def login():
 
 @ users_controller.route('/logout/')
 def logout():
+    '''LOGOUT'''
     session.clear()
     return redirect("/")
 
 
 @ users_controller.route('/signup', methods=["POST"])
 def signup_user():
+    '''SIGNUP VALIDATION CHECKING IF EMAIL EXISTS'''
     emails = get_users_email()
     for i in emails[0]:
         print(i)
