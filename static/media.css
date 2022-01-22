@@ -42,6 +42,10 @@
     padding: 0 4rem;
   }
 
+  .about p {
+    margin: 0 0 2rem;
+  }
+
   footer {
     display: flex;
     justify-content: space-between;
@@ -82,7 +86,7 @@
   }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
   .wrapper {
     padding: 4rem 8rem
   }
