@@ -3,23 +3,23 @@
 <button id="add_new" class="add_new btn">ADD NEW</button>
 
 <section class="job_cards">
-  {% for i in jobs %}
-  {% if i[1] == session['user_id'] %}
+  {% for job in jobs %}
+  {% if job['user_id'] == session['user_id'] %}
   <div class="job_card">
-    <p class="job_header"> {{ i[2] }}</p>
+    <p class="job_header"> {{ job['company'] }}</p>
     <div class="job_content">
-      <p>Role: {{ i[3] }}</p>
-      <p>Pay: {{ i[4] }}</p>
-      <p>Link: <a href="{{ i[5] }}" target="_blank">link</a></p>
-      <p>Date Applied: {{ i[6] }}</p>
-      <p>Contact: {{ i[7] }}</p>
-      <p>Email: {{ i[8] }}</p>
-      <p>Response: {{ i[9] }}</p>
+      <p>Role: {{ job['role'] }}</p>
+      <p>Pay: ${{ job["pay"] }}.00</p>
+      <p>Link: <a href="{{ job['link'] }}" target="_blank">link</a></p>
+      <p>Date Applied: {{ job['app_date'] }}</p>
+      <p>Contact: {{ job['contact_name'] }}</p>
+      <p>Email: {{ job['contact_details'] }}</p>
+      <p>Response: {{ job['app_response'] }}</p>
       <p>Interview:</p>
-      <p>&emsp;- Stage: {{ i[10] }}</p>
-      <p>&emsp;- Date: {{ i[11] }}</p>
+      <p>&emsp;- Stage: {{ job['interview_stage'] }}</p>
+      <p>&emsp;- Date: {{ job['interview_details'] }}</p>
       <p>Offer:
-        {% if i[12] == True %}
+        {% if job['offer'] == True %}
         Yes
         {% else %}
         No
@@ -27,10 +27,7 @@
       </p>
     </div>
     <div class="buttons">
-      <form action="/edit" method="post">
-        <input type="hidden" name="id" id="id" value="{{ i[0] }}" />
-        <button type="submit" class="btn edit">EDIT</button>
-      </form>
+      <a href="/jobs/{{ job['id'] }}/edit" class="btn edit">EDIT</a>
     </div>
   </div>
   {% endif %}

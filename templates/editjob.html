@@ -6,7 +6,7 @@
       <button id="editjob_close">&times;</button>
     </div>
     <div class="addnew_form">
-      <form action="/update" method="post">
+      <form action="/jobs/{{ session['job_data'][0] }}/update" method="post">
         <div>
           <label for="comany">COMPANY</label>
           <input type="text" id="company" name="company" aria-label="Company" value="{{ session['job_data'][2] }}"
@@ -57,17 +57,13 @@
             <option value="True">True</option>
             <option value="False">False</option>
           </select>
-          <input type="hidden" name="job_id" id="job_id" value="{{ session['job_data'][0] }}" />
           <button type="submit">UPDATE</button>
         </div>
       </form>
     </div>
-    <form action="/deletejob" method="post">
-      <div>
-        <input id="id" name="id" type="hidden" value="{{ session['job_data'][0] }}" />
-        <button class="delete btn" type="submit">DELETE</button>
-      </div>
-    </form>
+    <div>
+      <a href="/jobs/{{ session['job_data'][0] }}/delete" class="delete btn">DELETE</a>
+    </div>
   </div>
 </section>
 {% endblock editjob %}

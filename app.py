@@ -1,6 +1,7 @@
-'''IMPORT MODULES'''
+# IMPORT MODULES
 import os
 import datetime
+from typing import List
 from flask import Flask, render_template, session
 from models.jobs import get_all_jobs
 from controllers.jobs_controller import jobs_controller
@@ -15,12 +16,13 @@ year = datetime.datetime.now().year
 
 @app.route('/')
 def index():
-    jobs = get_all_jobs()
-    if type(session.get('job_data')) is not tuple:
+    if session.get("user_id") is None:
         session['job_data'] = None
         session['show'] = ""
-        return render_template("index.html", jobs=jobs, year=year)
+        return render_template("index.html", year=year)
     else:
+        jobs = get_all_jobs(session["user_id"])
+        print(session["job_data"])
         return render_template("index.html", jobs=jobs, year=year, show=session['show'])
 
 

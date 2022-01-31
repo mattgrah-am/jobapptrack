@@ -3,16 +3,16 @@
 {% if session['user_id'] %}
 {% include "jobs.html" %}
 {% block jobs %} {% endblock jobs %}
+{% include "editjob.html" %}
+{% block editjob %}{% endblock editjob %}
+{% include "newjob.html" %}
+{% block newjob %}{% endblock newjob %}
 {% else %}
 {% include "about.html" %}
 {% block about %} {% endblock about %}
-{% endif %}
 {% include "signup.html" %}
 {% block signup %}{% endblock signup %}
 {% include "login.html" %}
 {% block login %}{% endblock login %}
-{% include "newjob.html" %}
-{% block newjob %}{% endblock newjob %}
-{% include "editjob.html" %}
-{% block editjob %}{% endblock editjob %}
+{% endif %}
 {% endblock content %}
