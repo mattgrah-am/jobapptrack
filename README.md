@@ -1,6 +1,6 @@
 # Job Application Tracker
 
-GA-SEI - Project 2 - [Live Version](https://floating-forest-21500.herokuapp.com/)
+GA-SEI - Project 2 - [Live Version](https://job-app-track.herokuapp.com)
 
 ## Summary
 
